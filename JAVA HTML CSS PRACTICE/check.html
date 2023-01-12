@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <style>
+        h4{
+            margin-bottom: 0;
+            
+        }
+        .headoption{
+            border-bottom: solid 3px #FFC501;
+            width: 95%;
+            display: grid;
+            place-items: center;
+        }
+        body{
+            background-color: #ffffff;
+            color: white;
+            padding: 15px;
+   
+        }
+        .maincontainer{
+            border: none;
+            display: grid;
+            place-items: center;
+            padding: 15px;
+            box-shadow:  0 0 20px black;
+            border-radius: 15px;
+            background: #354F60;
+            gap: 10px;
+        }
+        .passgenerator{
+            font-size: 25px;
+            text-align: center;
+            padding: 5px;
+        }
+        .passgenerator:focus{
+            outline: none;
+        }
+        .selection{
+            display: grid;
+            width: 100%;
+            place-items: center;
+            border-radius: 10px;
+            background-color: #BC0E4C;
+        }
+        .passsettings{
+            padding: 15px;
+            display: grid;
+            place-items: center;
+            width: 100%;
+        }
+        .btn-generate{
+            background: #BC0E4C;
+            color: white;
+            font-weight: 700;
+            padding: 15px;
+            border: solid 3px #FFC501;
+            cursor: pointer;
+            border-radius: 25px;
+        }
+        .btn-generate:hover{
+            background: #FFC501;  
+        }
+        .material-symbols-outlined{
+            padding: 8px;
+            cursor: pointer;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="maincontainer">
+        <div>
+            <h1>Password Generator</h1>
+            <input class="passgenerator" type="text" disabled>
+            <span class="material-symbols-outlined">
+                content_copy
+                </span>
+        </div>
+        <div>
+            <label for="passgenerator">Password Length </label>
+            <span id="passlength">15</span>
+        </div>
+        <div>
+            <input type="range" id="setlength" min="1" max="30" value="15">
+        </div>
+        <div class="selection">
+            <div class="headoption">
+              <h4>Password Setup</h4>
+            </div>
+            <div class="passsettings">
+                <ul class="option">
+                    <li class="items">
+                        <input type="checkbox"id="lowercases" checked>
+                        <span>Lowercase a-z</span>
+                    </li>
+                    <li class="items">
+                        <input type="checkbox"id="uppercases" checked>
+                        <span>Uppercase A-Z</span>
+                    </li>
+                    <li class="items">
+                        <input type="checkbox"id="numbers" checked>
+                        <span>Numbers 0-9</span>
+                    </li>
+                    <li class="items">
+                        <input type="checkbox"id="symbols" checked>
+                        <span>Symbols !@#$%</span>
+                    </li>
+                </ul>
+                <button class="btn-generate">GENERATE PASSWORD</button>
+            </div>
+            
+        </div>
+
+    </div>
+
+    <script>
+        //MODEL
+
+        //VIEW
+
+        //CONTROL
+
+    </script>
+</body>
+</html>

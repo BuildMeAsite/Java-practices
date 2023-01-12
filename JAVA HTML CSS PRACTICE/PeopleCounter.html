@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 20px;
+                padding-left: 130px;
+                padding-right: 130px;
+                background-color: lightslategray;
+            }
+            .container{
+                display: grid;
+                grid-template-rows: 1fr 1fr;
+                place-items: center;
+            }
+            div>button{
+                padding: 20px 30px;
+                font-size: 20px;
+                font-weight: 700;
+                margin: 10px;
+                color: white;
+                background: orange;
+                border: none;
+            }
+
+            div>button:hover{
+                transition: all .5s;
+                color: red;
+                border-radius: 15px;
+            }
+
+            .color-scheme{
+                position: fixed;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                background: #f0f0f0;
+                display: flex;
+                flex-direction: column;
+            }
+            .history{
+                position: fixed;
+                top: 15px;
+                right: 10px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 2px;
+                place-items: center;
+                background: lightblue;
+                padding: 5px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div>
+                <h1>Counter</h1>
+            </div>
+            <div>
+                <h1 id="currentcount">0</h1>
+            </div>
+            <button id="increasebtn" onclick="increase()">Increase</button>
+            <button id="decreasebtn" onclick="decrease()">Decrease</button>
+            <button id="Save" onclick="saveme()">Save</button>
+        </div>
+        <div class="color-scheme">
+            <button id="redbtn" onclick="color_scheme(event)">Red</button>
+            <button id="greenbtn" onclick="color_scheme(event)">Green</button>
+            <button id="bluebtn" onclick="color_scheme(event)">blue</button>
+        </div>
+        <div class="history" id="history">
+
+        </div>
+        <div id="previous">
+
+        </div>
+    </body>
+    <script>
+        // MODEL
+        let count;
+        let savecount = []; // blank array
+        function addme(){ // increase the count function
+            let counter = document.getElementById('currentcount').innerText;
+            return Number(counter)+1;
+        }
+
+        function subme() { // decrease the count function
+            let counter = document.getElementById('currentcount').innerText;
+            if (counter > 0) {
+                return Number(counter)-1
+            } else {
+                return 0
+            }
+        }
+        
+        function saveme() { //capture the current date then push the value into array
+            let days = new Date().getDate();
+            let months = new Date().getMonth()+1;
+            let myyear = new Date().getFullYear();
+            savecount.push({
+                'date' : days+'/'+months+'/'+myyear,
+                'counts' : document.getElementById('currentcount').innerText
+            })
+            document.getElementById('history').innerHTML = "";
+            document.getElementById('currentcount').innerText = "0";
+            generatesave();
+            previous();
+        }
+
+        //VIEW
+        function previous(){//display the previous input
+            document.getElementById('previous').innerHTML="";
+            document.getElementById('previous').innerText="Previous: ";
+                savecount.forEach(function(item){
+                    let prevDiv = document.getElementById('previous');
+                    let newH3 = document.createElement('h3');
+                    newH3.textContent += + item.counts+' - '; // textContent will read all spaces
+                    newH3.style.display = "inline";
+                    prevDiv.appendChild(newH3);
+                })
+            }
+        function generatesave() {// display all saved counts from the array
+            savecount.forEach(function(item){
+                let container = document.getElementById('history');
+                let newDivDate = document.createElement('span');
+                let newDivCount = document.createElement('span');
+
+                newDivDate.innerText = item.date;
+                newDivCount.innerText = item.counts;
+
+                container.appendChild(newDivDate);
+                container.appendChild(newDivCount);
+            });
+        }
+
+
+
+        //CONTROL
+        
+        function increase(){
+            let = display_number = addme()
+            document.getElementById('currentcount').innerText = display_number;
+        }
+
+        function decrease(){
+            let = display_number = subme()
+            document.getElementById('currentcount').innerText = display_number;
+        }
+
+        function color_scheme(event) {
+            let btnid = event.target.id;
+            if (btnid == 'redbtn') {
+                document.body.style = "background: red";
+            }
+            if (btnid == 'greenbtn') {
+                document.body.style = "background: green";
+            }
+            if (btnid == 'bluebtn') {
+                document.body.style = "background: blue";
+            }
+        }
+        
+
+
+    </script>
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="General.css">
+</head
+
+
+
+
+
+
+
+
+
+>
+<body>
+    <div class="container1">
+        <div class="container" id="container1">asd</div>
+        <div class="container" id="container1">asd</div>
+        <div class="container" id="container1">asd</div>
+        <button onclick="showthis()" class="btrandom">random</button>
+    </div>
+    <div class="container2">
+        <div class="container3" id="orange"></div>
+        <div class="container3" id="red"></div>
+    </div>
+    
+
+    <script>
+        let arrProfile = [{
+            Name: 'Jeff',
+            Age : 15,
+            Hobbies :['chess','pc gaming']    
+        },
+        {
+            Name: 'Alita',
+            Age : 13,
+            Hobbies :['chess','tennis']   
+        },
+        {
+            Name: 'connie',
+            Age : 16,
+            Hobbies :['anime','dota']   
+        }
+    ]
+
+    let arrComments = [{
+            Name: 'Pidge Cruz',
+            comment :'Pumasok ng puyat umuwi ng kumpleto tulog'    
+        },
+        {
+            Name: 'Ashel Dy Dela Cruz',
+            comment :'Mambudol ng cx hahaha sabi nga nila fake it til you make it.'   
+        },
+        {
+            Name: 'Lawrence Dumindin',
+            comment :'mag suot Ng condom'  
+        },
+        {
+            Name: 'Stefhany Joy Misola',
+            comment :'tinuruan ako iba-iba ka chat HAHAHA'   
+        },
+        {
+            Name: 'Emilia Alarcon',
+            comment :'Kain ang kulangot haha'  
+        }
+    ]
+
+    let newComment = [];
+    function addhobbies(items,index){
+        arrProfile[index].Hobbies.push(items)
+    }
+    console.log(arrProfile[0].Hobbies[1])
+
+    function running(){
+        for (let index = 0; index < arrProfile.length; index++) {
+        const element = arrProfile[index];
+        
+
+        for (let indexs = 0; indexs < element.Hobbies.length; indexs++) {
+            console.log(element.Hobbies[indexs]);            
+        }
+    }
+    }
+
+    function addComment(name,comment){
+        newComment.push({
+            names : name,
+            comments : comment
+        })
+    }
+
+    function count10(){
+        for (let index = 0; index <= 100; index+=10) {
+            console.log(index);
+        }
+    }
+
+    function showComments(myarry){
+        for (let index = 0; index < myarry.length; index++) {
+            const element = myarry[index];
+            console.log(element.Name + ': ' + element.comment);
+            
+        }
+    }
+
+    function randomNumber(){
+        let shownumber = Math.random();
+        console.log(Math.round(shownumber*10));
+    }
+
+
+    function number13(){ // SETTING MY MAX NUMBER TO 13
+        let thirteen
+        let maxnumber
+
+        do {
+            for (let index = 0; index < 5; index++) {
+            maxnumber = Math.random();
+            thirteen = Math.round(maxnumber*100);
+            if (thirteen <= 13) { //WILL ONLY RETURN VALUE IF IT IS 13 OR BELOW.
+            return thirteen;
+            index = 5;
+            } else {
+                index = 0
+            }
+                
+            }
+        } while (thirteen < 14);
+        
+    }
+
+    function showthis(){
+        //USING QUERYSELECTORALL AS ARRAY THEN FOR LOOP TO CHANGE THE INNER TEXT OF EACH DIV
+        let divs = document.querySelectorAll('#container1');
+        for (let i = 0; i < divs.length; i++) {
+            divs[i].innerText = number13();
+            divs[i].style = "color: red; background: violet; transition: 1s;"
+            
+            
+        }
+    }
+
+    function ranom13() {
+        let randomnum = Math.floor(Math.random()*13)+1;
+
+        if (randomnum == 1) {
+            console.log('you got: '+randomnum);
+            return 11;
+        } 
+        else if (randomnum > 10){
+            console.log('you got: '+randomnum);
+            return 10;
+        }
+        else{
+            return randomnum;
+        }
+        
+    }
+    // TESTING OUT ARRAY COMBINATION
+      let arrballs = ['basket','soccer','baseball'];
+      let arrplayers = ['steve','john','bob'];
+      let combiarr = [...arrballs,...arrplayers];
+      let anotherarr = [...combiarr,'cold','hot','warm']
+
+
+
+      let course = {
+        title : 'Learn CSS Grid for free',
+        lessons : 16,
+        length : 63,
+        level : 2,
+        isFree : true,
+        tags : ['html','css']
+      }
+
+      let castle = {
+        title : 'Live like a king',
+        price : 190,
+        isSuperHost : true,
+        images : 'img/castle1.png'
+      };
+
+
+      let people = {
+        name : 'Jeff',
+        age : 28,
+        country : 'Philippines'
+      };
+
+      function LogData() {
+        console.log(people.name + ' is ' + people.age + ' years old and lives in ' + people.country);   
+      }
+
+      function selection(){
+      let age = 26;
+
+      if (age <= 6) {
+        console.log('Free!');
+      } else if (age >= 6 && age <= 17){
+        console.log('child discount');
+      } else if (age >= 19 && age <= 26){
+        console.log('student discount');
+      } else if (age >= 27 && age <= 66){
+        console.log('full price');
+      } else{
+        console.log('senior citizen discount');
+      }
+    }
+
+    let LargeCountries = ['Tuvalu', 'India','Indonesia','Monaco'];
+
+    function country(){
+        
+        let index = 0
+        console.log('The 5 Largest countries in the world:')
+        LargeCountries.forEach(function (){
+            console.log('-'+LargeCountries[index]);
+            index += 1;
+        })
+    }
+
+    function fixCountry() {
+        LargeCountries.shift()
+        console.log(LargeCountries);
+        LargeCountries.pop()
+        console.log(LargeCountries);
+        LargeCountries.push('Pakistan')
+        console.log(LargeCountries);
+        LargeCountries.unshift('China')
+        console.log(LargeCountries);
+    }
+
+
+    function jajanken(){
+        let hands = ['rock','paper','scissor']
+
+        let index  = Math.floor(Math.random()*3);
+
+        console.log(hands[index]);
+    }
+
+    function sortcolor(){
+        let arrfruit = [
+        {
+            fruit : 'apple',
+            color : 'red'
+        },
+        {
+            fruit : 'cherry',
+            color : 'red'
+        },
+        {
+            fruit : 'ponkan',
+            color : 'orange'
+        },
+        {
+            fruit : 'tomato',
+            color : 'orange'
+        },
+        {
+            fruit : 'belpepper',
+            color : 'orange'
+        },
+        {
+            fruit : 'raspberry',
+            color : 'red'
+        }]
+
+        for (let index = 0; index < arrfruit.length; index++) {
+            let fruits = arrfruit[index];
+            let containerRed = document.getElementById('red')
+            let containerOrange = document.getElementById('orange')
+            if (fruits.color === 'red') {
+                let fruitSelected = document.createElement('div');
+                fruitSelected.textContent = fruits.fruit;
+                fruitSelected.style = "color: red; border: solid 5px red; margin: 8px; padding: 5px"
+                containerRed.appendChild(fruitSelected);
+            } else {
+                let fruitSelecteds = document.createElement('div');
+                fruitSelecteds.textContent = fruits.fruit;
+                fruitSelecteds.style = "color: orange; border: solid 5px orange; margin: 8px; padding: 5px"
+                containerOrange.appendChild(fruitSelecteds);
+            }
+            let stylecontainer = document.querySelectorAll('.container3')
+            for (let i = 0; i < stylecontainer.length; i++) {
+                stylecontainer[i].style = "padding: 10px; margin: 10px; display: flex; flex-direction: row;"
+            }
+            
+        }
+    }
+    </script>
+</body>
+</html>
