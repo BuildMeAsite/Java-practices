@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-dark navbar-expand-md fixed-top">
+    <div class="container">
+      <a href="#" class="navbar-brand fs-2">
+        <span>PORT<span class="orangeFont">FOLIO.</span></span>
+      </a>
+
+      <button 
+      class="navbar-toggler" 
+      type="button" 
+      data-bs-toggle="collapse" 
+      data-bs-target="#navCollapse"
+      aria-controls="navCollapse"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse  justify-content-end" id="navCollapse">
+        <ul class="navbar-nav">
+          <li class="nav-item ">
+            <a href="#home" class="nav-link fs-5 navmenu active" aria-current="page">
+              <span><span class="orangeFont">H</span>ome</span>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a href="#aboutme" class="nav-link fs-5 navmenu active">
+              <span><span class="orangeFont">A</span>bout</span>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a href="#myskills" class="nav-link fs-5 navmenu active">
+              <span><span class="orangeFont">S</span>kills</span>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a href="#myprojects" class="nav-link fs-5 navmenu active">
+              <span><span class="orangeFont">P</span>rojects</span>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a href="#mydemo" class="nav-link fs-5 navmenu active">
+              <span><span class="orangeFont">D</span>emo</span>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a href="#contact" class="nav-link fs-5 navmenu active">
+              <span><span class="orangeFont">C</span>ontact</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <section class="dropper--container" id="home">
+    <div class="dropper"></div>
+    <span class="fs-5 fw-bold hiddensec introduction">HI THERE I'M</span>
+    <span class="fs-1 fw-bolder hiddensec introduction">MICHAEL <span class="orangeFont">JEFF</span>REY PAPAS</span>
+    <span class="fs-5 hiddensec introduction">
+      A <span class="orangeFont fw-bold">Front-End Developer</span> that is passionate about creating <span class="orangeFont fw-bold">interactive</span> applications and prioritize <span class="orangeFont fw-bold">accessibility</span> on the web.
+    </span>
+  </section>
+  <section class="slider" id="aboutme">
+    <div class="about--me--container">
+      <div class="about--me--child">
+        <img class="profile--pic" src="/me.png" alt="">
+        <div class="CV--btn hiddensec">
+          <a class="fs-3 CV--link" href="/MJLP RESUME.pdf" download="">My CV</a>
+        </div>
+      </div>
+      <div class="about--me--child hiddensec">
+        <span class="fs-1 fw-bolder orangeFont hiddensec">About Me</span>
+        <span class="fs-4 fst-italic mt-1">
+         Jeff is a self-taught developer that can blend well within a team or work alone. He makes readable documentation on his code. And dedicated to continuously learning new front-end frameworks and design concepts to adapt to the current trend.
+        </span>
+        
+      </div>
+    </div>
+  </section>
+  <section class="slider" id="myskills">
+    <span class="big--font underline--text mb-5">Skills</span>
+    <div class="skill--container">
+        <img src="https://raw.githubusercontent.com/vscode-icons/vscode-icons/23484f41d6852846e74f65320691203644291341/icons/file_type_html.svg" alt="" class="skill--icons hiddensec" data-bs-toggle="tooltip" data-bs-placement="top" title="HTML5">
+        <img src="https://raw.githubusercontent.com/vscode-icons/vscode-icons/23484f41d6852846e74f65320691203644291341/icons/file_type_css.svg" alt="" class="skill--icons hiddensec" data-bs-toggle="tooltip" data-bs-placement="top" title="CSS3">
+        <img src="https://raw.githubusercontent.com/vscode-icons/vscode-icons/23484f41d6852846e74f65320691203644291341/icons/file_type_js_official.svg" alt="" class="skill--icons hiddensec" data-bs-toggle="tooltip" data-bs-placement="top" title="Vanilla Javascript">
+        <img src="https://cdn.changelog.com/uploads/icons/topics/9Rl/icon_small.png?v=63682389456" alt="" class="skill--icons hiddensec" data-bs-toggle="tooltip" data-bs-placement="top" title="Javascript ES6">
+        <img src="https://github.com/vscode-icons/vscode-icons/raw/master/icons/file_type_git.svg" alt="" class="skill--icons hiddensec" data-bs-toggle="tooltip" data-bs-placement="top" title="Git"> 
+        <img src="https://raw.githubusercontent.com/vscode-icons/vscode-icons/23484f41d6852846e74f65320691203644291341/icons/file_type_reactjs.svg" alt="" class="skill--icons hiddensec" data-bs-toggle="tooltip" data-bs-placement="top" title="React">
+        <img src="https://raw.githubusercontent.com/vscode-icons/vscode-icons/23484f41d6852846e74f65320691203644291341/icons/file_type_npm.svg" alt="" class="skill--icons hiddensec" data-bs-toggle="tooltip" data-bs-placement="top" title="NPM">
+        <img src="https://icons-for-free.com/iconfiles/png/128/css+bootstrap-1330884282233217685.png" alt="" class="skill--icons hiddensec" data-bs-toggle="tooltip" data-bs-placement="top" title="Bootstrap 5">
+        <img src="https://raw.githubusercontent.com/vscode-icons/vscode-icons/23484f41d6852846e74f65320691203644291341/icons/file_type_node.svg" alt="" class="skill--icons hiddensec" data-bs-toggle="tooltip" data-bs-placement="top" title="NodeJS">
+    </div>
+  </section>
+
+  <section class="slider" id="myprojects">
+    <span class="big--font underline--text mb-5">Projects</span>
+    <div id="carouselExampleIndicators" class="carousel slide caro--container hiddensec " data-bs-ride="carousel">
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="/fb.PNG" class="d-block w-100" alt="">
+          <div class="carousel-caption bg-light-subtle caro--nav">
+            <h5 class="caro--title">Facebook-Express</h5>
+            <a class="btn btn-primary" href="https://github.com/BuildMeAsite/FINAL-version" target="_blank">Code</a>
+            <a class="btn btn-danger" href="https://fb-clone-mjlp.netlify.app" target="_blank">Live</a>
+          </div>
+        </div>
+        <div class="carousel-item active">
+          <img src="/YT.PNG" class="d-block w-100" alt="">
+          <div class="carousel-caption bg-light-subtle caro--nav">
+            <h5  class="caro--title">Youtube-React</h5>
+            <a class="btn btn-primary" href="https://github.com/BuildMeAsite/FINAL-version/tree/main/YOUTUBE--REACT" target="_blank">Code</a>
+            <a class="btn btn-danger" href="https://yt-clone-mjlp.netlify.app" target="_blank">Live</a>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev caro--btn" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next caro--btn" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+  <section class="slider" id="mydemo">
+    <span class="big--font underline--text mb-5 mt-5">Facebook-clone</span>
+
+    <div class="project--container ">
+      <div class="container-fluid project--container--vid ">
+        <iframe class="myVid" src="https://www.youtube.com/embed/Nctv9Nb0GJw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <div class="demo--description hiddensec">
+        <span class="fs-1 title orangeFont">Facebook-Express</span>
+        <ul class="demo--text fs-5">
+          <li>Vanilla Javascript</li>
+          <li>MVC structure</li>
+          <li>Well documented</li>
+          <li>Can save user details thru localStorage</li>
+          <li>Reusable functions</li>
+          <li>Responsive</li>
+          <li>Random chat event</li>
+          <li>Contact status refresh</li>
+          <li>New post generated thru window scroll location</li>
+          <li>Chat reply</li>
+          <li>Customizable post text or media(image/video)</li>
+
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="slider">
+    <span class="big--font underline--text mb-5 mt-5">Youtube-clone</span>
+
+    <div class="project--container ">
+      <div class="container-fluid project--container--vid ">
+        <iframe class="myVid" src="https://www.youtube.com/embed/fdv5p9XwcDk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <div class="demo--description hiddensec">
+        <span class="fs-1 title orangeFont">Youtube-React</span>
+        <ul class="demo--text fs-5">
+          <li>REACT framework</li>
+          <li>Responsive</li>
+          <li>Utilize state</li>
+          <li>Utilize Props</li>
+          <li>Passing state to nested component</li>
+          <li>Random comments</li>
+          <li>Random react count</li>
+          <li>State saves subscribed channel</li>
+          <li>Partly made with Bootstrap 5</li>
+
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="contact--footer" id="contact">
+    <div class="contact--child">
+      <div class="contact hiddensec">
+        <span class="material-symbols-outlined orangeFont">
+          send
+        </span>
+        michaeljeffreypapas09@gmail.com
+      </div>
+      <div class="contact hiddensec">
+        <span class="material-symbols-outlined orangeFont">
+          call
+        </span>
+        +63999-796-7662
+      </div>
+      <div class="contact hiddensec">
+        <span class="material-symbols-outlined orangeFont">
+          language
+        </span>
+        <a class="anchors" href="https://www.facebook.com/MJLPAPAS" target="_blank">Facebook</a>
+      </div>
+    </div>
+    <div class="contact--child ">
+      <div class="contact hiddensec">
+        <span class="material-symbols-outlined orangeFont">
+          language
+        </span>
+        <a class="anchors" href="https://github.com/BuildMeAsite?tab=repositories" target="_blank">GitHub</a>
+      </div>
+      <div class="contact hiddensec">
+        <span class="material-symbols-outlined orangeFont">
+          language
+        </span>
+        <a class="anchors" href="https://www.youtube.com/channel/UC7UCH5WoBh8p8EpRnZyUbTw" target="_blank">Youtube</a>
+      </div>
+      <div class="contact hiddensec">
+        <span class="material-symbols-outlined orangeFont">
+          language
+        </span>
+        <a class="anchors" href="https://www.linkedin.com/in/michael-jeffrey-papas" target="_blank">Linkedin</a>
+      </div>
+    </div>
+
+  </section>
+
+</body>
+</html>
